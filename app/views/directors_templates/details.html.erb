@@ -4,6 +4,7 @@
 <a href="/directors"> Go back </a> 
 
 <hr> 
+
 <dl>
 
 <dt> Name </dt>
@@ -18,13 +19,15 @@
 <dd> <%= @the_director.created_at%>  </dd> 
 <dt> Updated at </dt>
 <dd> <%= @the_director.updated_at%>   </dd> 
+
 </dl>
+
 </hr>
 
 <h2> Filmography </h2>
 
 <% matching_movies = Movie.where({:director_id =>  @the_director.id })%>
-<table border = 1>
+<table border = "1">
 <tr>
 <th> ID </th>
 <th> Image </th>
