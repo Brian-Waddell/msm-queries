@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get("/movies", {:controller => "movies", :action => "index"})
   get("/movies/:the_id", {:controller => "movies", :action => "show"})
 
-  get("/youngest", {:controller => "age", :action => "index_young"})
-  get("/eldest", {:controller => "age", :action => "show_old"})
+  get("directors/youngest", {:controller => "age", :action => "index_young"})
+  get("directors/eldest", {:controller => "age", :action => "show_old"})
 
 end
