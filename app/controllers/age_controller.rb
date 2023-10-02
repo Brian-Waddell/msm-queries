@@ -2,7 +2,7 @@ class AgeController < ApplicationController
 
   def index_young
 
-    @the_record = Director.where.not(dob: nil).order({:dob => :desc}).at(0)
+    @the_director = Director.where.not(dob: nil).order({:dob => :desc}).at(0)
     
     render({ :template => "/age_template/youngest_details"})
 
